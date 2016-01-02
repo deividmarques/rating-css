@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Rating with CSS</title>
+  <title>Rating only CSS</title>
 
   <link href='https://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="assets/css/style.css">
@@ -10,26 +10,31 @@
 </head>
 <body>
 
-    <h2 class="title">Star rating</h2>
+    <header class="topbar">Enjoy with rating only CSS</header>
+
+    <h2 class="title">Star</h2>
     <div class="rating rating-star">
       <input id="rating5a" type="radio" name="rating" value="5">
-      <label for="rating5a">5</label>
-      <input id="rating4a" type="radio" name="rating" value="4" checked>
-      <label for="rating4a">4</label>
+      <label title="Vote 5" for="rating5a">5</label>
+      <input id="rating4a" type="radio" name="rating" value="4" >
+      <label title="Vote 4" for="rating4a">4</label>
       <input id="rating3a" type="radio" name="rating" value="3" >
-      <label for="rating3a">3</label>
+      <label title="Vote 3" for="rating3a">3</label>
       <input id="rating2a" type="radio" name="rating" value="2">
-      <label for="rating2a">2</label>
+      <label title="Vote 2" for="rating2a">2</label>
       <input id="rating1a" type="radio" name="rating" value="1">
-      <label for="rating1a">1</label>
+      <label title="Vote 1" for="rating1a">1</label>
     </div>
 
+    <hr>
+
+    <h2 class="title">Circle</h2>
     <div class="rating rating-circle">
       <input id="rating5b" type="radio" name="rating2" value="5">
       <label for="rating5b">5</label>
-      <input id="rating4b" type="radio" name="rating2" value="4" checked>
+      <input id="rating4b" type="radio" name="rating2" value="4" >
       <label for="rating4b">4</label>
-      <input id="rating3b" type="radio" name="rating2" value="3" >
+      <input id="rating3b" type="radio" name="rating2" value="3" checked >
       <label for="rating3b">3</label>
       <input id="rating2b" type="radio" name="rating2" value="2">
       <label for="rating2b">2</label>
@@ -37,10 +42,13 @@
       <label for="rating1b">1</label>
     </div>
 
-    <div class="rating rating-button">
+    <hr>
+
+    <h2 class="title">Bar</h2>
+    <div class="rating rating-bar">
       <input id="rating5c" type="radio" name="rating3" value="5">
       <label for="rating5c">5</label>
-      <input id="rating4c" type="radio" name="rating3" value="4" checked>
+      <input id="rating4c" type="radio" name="rating3" value="4">
       <label for="rating4c">4</label>
       <input id="rating3c" type="radio" name="rating3" value="3" >
       <label for="rating3c">3</label>
@@ -49,6 +57,8 @@
       <input id="rating1c" type="radio" name="rating3" value="1">
       <label for="rating1c">1</label>
     </div>
+
+    <hr>
 
 
 </body>
