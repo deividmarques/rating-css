@@ -1,0 +1,89 @@
+$size-default: 100px
+$height-default: 50px
+$color: #fff
+$colorCircle: #fff
+$colorButton: #FFF
+
+.rating:not(old)
+  overflow: hidden
+  display: flex
+  flex-direction: row-reverse
+  justify-content: center
+  margin-bottom: 50px
+
+  label
+    cursor: pointer
+    position: relative
+    overflow: hidden
+
+    &::before
+      content: " "
+      display: block
+      opacity: 0
+
+  label:hover:before,
+  label:hover ~ label:before,
+  label:hover span:before,
+  label:hover ~ label span,
+  &:not(:hover) > :checked ~ label:before,
+  &:not(:hover) > :checked ~ label span
+    opacity: 1
+
+  > input
+    opacity: 0
+
+// Style Default
+.rating:not(old)
+
+  label
+    background: rgba($color, .2)
+    width: $size-default
+    margin-left: 1px
+    height: $size-default
+
+    &::before
+      transition: opacity 0.2s linear
+      -webkit-transition: opacity 0.2s linear
+      -moz-transition: opacity 0.2s linear
+      -ms-transition: opacity 0.2s linear
+      width: $size-default
+      height: $size-default
+      background: $color
+
+
+  // Style Circle
+  &.rating-circle
+
+    label
+      background: rgba($colorCircle, .5)
+      border-radius: 50%
+      transform: scale(1)
+
+      &::before
+        border-radius: 50%
+        opacity: 0
+        transform: scale(.1)
+        background: $colorCircle
+        transition: transform 0.2s ease-in
+        -webkit-transition: transform 0.2s ease-in
+        -moz-transition: transform 0.2s ease-in
+        -ms-transition: transform 0.2s ease-in
+
+    label:hover:before,
+    label:hover ~ label:before,
+    label:hover span:before,
+    label:hover ~ label span,
+    &:not(:hover) > :checked ~ label:before,
+    &:not(:hover) > :checked ~ label span
+      transform: scale(1)
+      opacity: 1
+
+  // Style Button
+  &.rating-button
+
+    label
+      background: $colorButton
+
+      &::before
+        box-shadow: inset 0 6px 8px rgba(0,0,0, .3)
+        background: $colorButton
