@@ -1,5 +1,5 @@
 $size-default: 100px
-$size-pacman: 60px
+$size-pacman: 50px
 $height-default: 50px
 $size-star: 130px
 $color: #fff
@@ -113,7 +113,9 @@ $color-pacman: #FFFF00
       &:hover
         transform: scale(1.1)
         @include transition(transform 0.2s ease-in)
+        filter: drop-shadow(5px 5px 6px rgba(#000,.5))
         -webkit-filter: drop-shadow(5px 5px 6px rgba(#000,.5))
+        -moz-filter: drop-shadow(5px 5px 6px rgba(#000,.5))
 
 
   // Style Pacman
@@ -131,6 +133,16 @@ $color-pacman: #FFFF00
       border-bottom-left-radius: $size-pacman
       border-bottom-right-radius: $size-pacman
       margin: 0 5px
+      box-shadow: -5px 3px 5px rgba(#000, .4)
+
+      &::before
+        content: ""
+        position: absolute
+        width: 20px
+        height: 20  px
+        background: #000
+        left: 0
+        top: 0
 
 
     label:hover,

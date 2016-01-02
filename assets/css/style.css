@@ -32,9 +32,21 @@ body {
   z-index: 2; }
 
 hr {
-  margin: 50px 0;
+  margin: 50px 20%;
   border: none;
   border-bottom: 8px double rgba(0, 0, 0, 0.1); }
+
+.foot {
+  padding: 10px;
+  margin-top: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: white;
+  font-size: 12px; }
+  .foot a {
+    color: white; }
+    .foot a:hover, .foot a:focus {
+      text-decoration: none; }
 
 .rating:not(old) {
   display: flex;
@@ -149,19 +161,30 @@ hr {
     -o-transition: transform 0.2s ease-in;
     -webkit-transition: transform 0.2s ease-in;
     transition: transform 0.2s ease-in;
-    -webkit-filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.5)); }
+    filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.5));
+    -webkit-filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.5));
+    -moz-filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.5)); }
 .rating:not(old).rating-pacman label {
   width: 0px;
   height: 0px;
-  border-right: 60px solid #6d00d9;
-  border-top: 60px solid yellow;
-  border-left: 60px solid yellow;
-  border-bottom: 60px solid yellow;
-  border-top-left-radius: 60px;
-  border-top-right-radius: 60px;
-  border-bottom-left-radius: 60px;
-  border-bottom-right-radius: 60px;
-  margin: 0 5px; }
+  border-right: 50px solid #6d00d9;
+  border-top: 50px solid yellow;
+  border-left: 50px solid yellow;
+  border-bottom: 50px solid yellow;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  margin: 0 5px;
+  box-shadow: -5px 3px 5px rgba(0, 0, 0, 0.4); }
+  .rating:not(old).rating-pacman label::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20 px;
+    background: black;
+    left: 0;
+    top: 0; }
 .rating:not(old).rating-pacman label:hover,
 .rating:not(old).rating-pacman label:hover ~ label, .rating:not(old).rating-pacman:not(:hover) > :checked ~ label {
   border-right-color: yellow; }
