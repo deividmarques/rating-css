@@ -1,0 +1,126 @@
+$size1: 80px
+$size2: 60px
+
+$uncheck: #f5f5f5
+$check: #5C26FF
+
+.rating > label span
+  // position: relative
+  // margin: 72px 0
+  // width: 0px
+  // height: 0px
+  // border-right: $size1 solid transparent
+  // border-bottom: $size2 solid $uncheck
+  // border-left: $size1 solid transparent
+  // -webkit-transform: rotate(37deg)
+  // -moz-transform: rotate(37deg)
+  // -ms-transform: rotate(37deg)
+  // -o-transform: rotate(37deg)
+  // transform: rotate(37deg)
+
+  margin: 25px 0
+  width: 0px
+  height: 0px
+  border-right: 80px solid transparent
+  border-bottom: 60px solid $uncheck
+  border-left: 80px solid transparent
+  -webkit-transform: rotate(0deg)
+  -moz-transform: rotate(0deg)
+  -ms-transform: rotate(0deg)
+  -o-transform: rotate(0deg)
+  transform: rotate(0deg)
+
+  position: absolute
+  z-index: 2
+  top: -25px
+  left: -80px
+
+
+.rating > label span:before
+  position: absolute
+  display: block
+  width: 0
+  height: 0
+  top: -45px
+  left: -54px
+  content: ""
+  border-bottom: 84px solid $uncheck
+  border-left: 28px solid transparent
+  border-right: 28px solid transparent
+  -webkit-transform: rotate(323deg)
+  -moz-transform: rotate(323deg)
+  -ms-transform: rotate(323deg)
+  -o-transform: rotate(323deg)
+  transform: rotate(323deg)
+
+
+.rating > label span:after
+  position: absolute
+  display: block
+  width: 0px
+  height: 0px
+  top: 0
+  left: -$size1
+  content: ""
+  border-right: $size1 solid transparent
+  border-bottom: $size2 solid $uncheck
+  border-left: $size1 solid transparent
+  -webkit-transform: rotate(286deg)
+  -moz-transform: rotate(286deg)
+  -ms-transform: rotate(286deg)
+  -o-transform: rotate(286deg)
+  transform: rotate(286deg)
+
+
+// Teste
+
+
+.rating > label
+  position: relative
+  margin: 72px 0
+  width: 0px
+  height: 0px
+  border-right: $size1 solid transparent
+  border-bottom: $size2 solid $check
+  border-left: $size1 solid transparent
+  -webkit-transform: rotate(37deg)
+  -moz-transform: rotate(37deg)
+  -ms-transform: rotate(37deg)
+  -o-transform: rotate(37deg)
+  transform: rotate(37deg)
+
+
+.rating > label:before
+  position: absolute
+  display: block
+  width: 0
+  height: 0
+  top: -45px
+  left: -54px
+  content: ""
+  border-bottom: 84px solid $check
+  border-left: 28px solid transparent
+  border-right: 28px solid transparent
+  -webkit-transform: rotate(323deg)
+  -moz-transform: rotate(323deg)
+  -ms-transform: rotate(323deg)
+  -o-transform: rotate(323deg)
+  transform: rotate(323deg)
+
+
+.rating > label:after
+  position: absolute
+  display: block
+  width: 0px
+  height: 0px
+  top: 0
+  left: -$size1
+  content: ""
+  border-right: $size1 solid transparent
+  border-bottom: $size2 solid $check
+  border-left: $size1 solid transparent
+  -webkit-transform: rotate(286deg)
+  -moz-transform: rotate(286deg)
+  -ms-transform: rotate(286deg)
+  -o-transform: rotate(286deg)
+  transform: rotate(286deg)
