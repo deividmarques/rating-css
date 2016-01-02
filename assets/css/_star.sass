@@ -1,12 +1,13 @@
 $size-default: 100px
+$size-pacman: 60px
 $height-default: 50px
-$size-star: 125px
+$size-star: 130px
 $color: #fff
 $colorCircle: #fff
 $colorButton: #FFF
+$color-pacman: #FFFF00
 
 .rating:not(old)
-  overflow: hidden
   display: flex
   flex-direction: row-reverse
   justify-content: center
@@ -43,10 +44,7 @@ $colorButton: #FFF
     height: $size-default
 
     &::before
-      transition: opacity 0.2s linear
-      -webkit-transition: opacity 0.2s linear
-      -moz-transition: opacity 0.2s linear
-      -ms-transition: opacity 0.2s linear
+      @include transition(opacity 0.2s linear)
       width: $size-default
       height: $size-default
       background: $color
@@ -66,10 +64,7 @@ $colorButton: #FFF
         opacity: 0
         transform: scale(.1)
         background: $colorCircle
-        transition: transform 0.2s ease-in
-        -webkit-transition: transform 0.2s ease-in
-        -moz-transition: transform 0.2s ease-in
-        -ms-transition: transform 0.2s ease-in
+        @include transition(transform 0.2s ease-in)
 
     label:hover:before,
     label:hover ~ label:before,
@@ -87,19 +82,19 @@ $colorButton: #FFF
       background: rgba($color, .1)
 
       &:nth-child(2)::before
-        @include bg-gradient-t2b(#0dbc15, #0dbc15)
+        @include bg-gradient(#0dbc15, #0dbc15)
 
       &:nth-child(4)::before
-        @include bg-gradient-t2b(#37e510, #0dbc15)
+        @include bg-gradient(#37e510, #0dbc15)
 
       &:nth-child(6)::before
-        @include bg-gradient-t2b(#c1f765, #37e510)
+        @include bg-gradient(#c1f765, #37e510)
 
       &:nth-child(8)::before
-        @include bg-gradient-t2b(#fcf299, #c1f765)
+        @include bg-gradient(#fcf299, #c1f765)
 
       &:nth-child(10)::before
-        @include bg-gradient-t2b(#f7f3cd, #fcf299)
+        @include bg-gradient(#f7f3cd, #fcf299)
 
 
   // Style Star
@@ -111,7 +106,37 @@ $colorButton: #FFF
       height: $size-star
 
     label
-      background: url(../images/star-off.svg) transparent
+      background: url(../images/star-off.png) no-repeat transparent
+      margin: 0 5px
 
       &::before
-        background: url(../images/star-on.svg) transparent
+        background: url(../images/star-on.png) no-repeat transparent
+
+      &:hover
+        transform: scale(1.1)
+        @include transition(transform 0.2s ease-in)
+        -webkit-filter: drop-shadow(5px 5px 6px rgba(#000,.5))
+
+
+
+  // Style Pacman
+  &.rating-pacman
+
+    label
+      width: 0px
+      height: 0px
+      border-right: $size-pacman solid $bg-project
+      border-top: $size-pacman solid $color-pacman
+      border-left: $size-pacman solid $color-pacman
+      border-bottom: $size-pacman solid $color-pacman
+      border-top-left-radius: $size-pacman
+      border-top-right-radius: $size-pacman
+      border-bottom-left-radius: $size-pacman
+      border-bottom-right-radius: $size-pacman
+      margin: 0 5px
+
+
+    label:hover,
+    label:hover ~ label,
+    &:not(:hover) > :checked ~ label,
+      border-right-color: $color-pacman
