@@ -22,11 +22,11 @@ $color-pacman: #FFFF00
       display: block
       opacity: 0
 
-  label:hover:before,
-  label:hover ~ label:before,
-  label:hover span:before,
+  label:hover::before,
+  label:hover ~ label::before,
+  label:hover span::before,
   label:hover ~ label span,
-  &:not(:hover) > :checked ~ label:before,
+  &:not(:hover) > :checked ~ label::before,
   &:not(:hover) > :checked ~ label span
     opacity: 1
 
@@ -67,7 +67,7 @@ $color-pacman: #FFFF00
 
     label:hover:before,
     label:hover ~ label:before,
-    &:not(:hover) > :checked ~ label:before
+    &:not(:hover) > :checked ~ label::before
       @include transition(transform 0.2s ease-in)
       transform: scale(.85)
       opacity: 1
@@ -78,6 +78,9 @@ $color-pacman: #FFFF00
 
     label
       background: rgba($color, .1)
+
+      &::before
+        background: red
 
       &:nth-child(2)::before
         @include bg-gradient(#0dbc15, #0dbc15)

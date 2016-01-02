@@ -61,10 +61,10 @@ hr {
       content: " ";
       display: block;
       opacity: 0; }
-  .rating:not(old) label:hover:before,
-  .rating:not(old) label:hover ~ label:before,
-  .rating:not(old) label:hover span:before,
-  .rating:not(old) label:hover ~ label span, .rating:not(old):not(:hover) > :checked ~ label:before, .rating:not(old):not(:hover) > :checked ~ label span {
+  .rating:not(old) label:hover::before,
+  .rating:not(old) label:hover ~ label::before,
+  .rating:not(old) label:hover span::before,
+  .rating:not(old) label:hover ~ label span, .rating:not(old):not(:hover) > :checked ~ label::before, .rating:not(old):not(:hover) > :checked ~ label span {
     opacity: 1; }
   .rating:not(old) > input {
     opacity: 0;
@@ -97,7 +97,7 @@ hr {
     transform: scale(0.1);
     background: #c350d9; }
 .rating:not(old).rating-circle label:hover:before,
-.rating:not(old).rating-circle label:hover ~ label:before, .rating:not(old).rating-circle:not(:hover) > :checked ~ label:before {
+.rating:not(old).rating-circle label:hover ~ label:before, .rating:not(old).rating-circle:not(:hover) > :checked ~ label::before {
   -moz-transition: transform 0.2s ease-in;
   -o-transition: transform 0.2s ease-in;
   -webkit-transition: transform 0.2s ease-in;
@@ -106,6 +106,8 @@ hr {
   opacity: 1; }
 .rating:not(old).rating-bar label {
   background: rgba(255, 255, 255, 0.1); }
+  .rating:not(old).rating-bar label::before {
+    background: red; }
   .rating:not(old).rating-bar label:nth-child(2)::before {
     background-color: #0dbc15;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#0dbc15), to(#0dbc15));
