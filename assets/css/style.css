@@ -5,6 +5,14 @@ body {
   position: relative;
   margin-bottom: 50px; }
 
+.title {
+  font-size: 42px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  text-align: center;
+  color: white;
+  font-family: "Luckiest Guy"; }
+
 .rating:not(old) {
   overflow: hidden;
   display: flex;
@@ -64,3 +72,11 @@ body {
   .rating:not(old).rating-button label::before {
     box-shadow: inset 0 6px 8px rgba(0, 0, 0, 0.3);
     background: white; }
+.rating:not(old).rating-star label,
+.rating:not(old).rating-star label::before {
+  width: 125px;
+  height: 125px; }
+.rating:not(old).rating-star label {
+  background: url(../images/star-off.svg) transparent; }
+  .rating:not(old).rating-star label::before {
+    background: url(../images/star-on.svg) transparent; }
