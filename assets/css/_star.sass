@@ -3,8 +3,7 @@ $size-pacman: 60px
 $height-default: 50px
 $size-star: 130px
 $color: #fff
-$colorCircle: #fff
-$colorButton: #FFF
+$colorCircle: #C350D9
 $color-pacman: #FFFF00
 
 .rating:not(old)
@@ -58,22 +57,21 @@ $color-pacman: #FFFF00
       border-radius: 50%
       transform: scale(1)
       margin: 0 3px
+      @include transition(transform 0.2s ease-in)
 
       &::before
         border-radius: 50%
         opacity: 0
         transform: scale(.1)
         background: $colorCircle
-        @include transition(transform 0.2s ease-in)
 
     label:hover:before,
     label:hover ~ label:before,
-    label:hover span:before,
-    label:hover ~ label span,
-    &:not(:hover) > :checked ~ label:before,
-    &:not(:hover) > :checked ~ label span
-      transform: scale(1)
+    &:not(:hover) > :checked ~ label:before
+      @include transition(transform 0.2s ease-in)
+      transform: scale(.85)
       opacity: 1
+
 
   // Style Bar
   &.rating-bar
@@ -116,7 +114,6 @@ $color-pacman: #FFFF00
         transform: scale(1.1)
         @include transition(transform 0.2s ease-in)
         -webkit-filter: drop-shadow(5px 5px 6px rgba(#000,.5))
-
 
 
   // Style Pacman

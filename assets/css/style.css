@@ -71,24 +71,26 @@ hr {
     height: 100px;
     background: white; }
 .rating:not(old).rating-circle label {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(195, 80, 217, 0.5);
   border-radius: 50%;
   transform: scale(1);
-  margin: 0 3px; }
+  margin: 0 3px;
+  -moz-transition: transform 0.2s ease-in;
+  -o-transition: transform 0.2s ease-in;
+  -webkit-transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in; }
   .rating:not(old).rating-circle label::before {
     border-radius: 50%;
     opacity: 0;
     transform: scale(0.1);
-    background: white;
-    -moz-transition: transform 0.2s ease-in;
-    -o-transition: transform 0.2s ease-in;
-    -webkit-transition: transform 0.2s ease-in;
-    transition: transform 0.2s ease-in; }
+    background: #c350d9; }
 .rating:not(old).rating-circle label:hover:before,
-.rating:not(old).rating-circle label:hover ~ label:before,
-.rating:not(old).rating-circle label:hover span:before,
-.rating:not(old).rating-circle label:hover ~ label span, .rating:not(old).rating-circle:not(:hover) > :checked ~ label:before, .rating:not(old).rating-circle:not(:hover) > :checked ~ label span {
-  transform: scale(1);
+.rating:not(old).rating-circle label:hover ~ label:before, .rating:not(old).rating-circle:not(:hover) > :checked ~ label:before {
+  -moz-transition: transform 0.2s ease-in;
+  -o-transition: transform 0.2s ease-in;
+  -webkit-transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transform: scale(0.85);
   opacity: 1; }
 .rating:not(old).rating-bar label {
   background: rgba(255, 255, 255, 0.1); }
