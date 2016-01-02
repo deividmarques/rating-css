@@ -32,6 +32,7 @@ $colorButton: #FFF
 
   > input
     opacity: 0
+    width: 0
 
 // Style Default
 .rating:not(old)
@@ -39,7 +40,6 @@ $colorButton: #FFF
   label
     background: rgba($color, .2)
     width: $size-default
-    margin-left: 1px
     height: $size-default
 
     &::before
@@ -59,6 +59,7 @@ $colorButton: #FFF
       background: rgba($colorCircle, .5)
       border-radius: 50%
       transform: scale(1)
+      margin: 0 3px
 
       &::before
         border-radius: 50%
@@ -79,17 +80,29 @@ $colorButton: #FFF
       transform: scale(1)
       opacity: 1
 
-  // Style Button
-  &.rating-button
+  // Style Bar
+  &.rating-bar
 
     label
-      background: $colorButton
+      background: rgba($color, .1)
 
-      &::before
-        box-shadow: inset 0 6px 8px rgba(0,0,0, .3)
-        background: $colorButton
+      &:nth-child(2)::before
+        @include bg-gradient-t2b(#0dbc15, #0dbc15)
 
-  // Style Card
+      &:nth-child(4)::before
+        @include bg-gradient-t2b(#37e510, #0dbc15)
+
+      &:nth-child(6)::before
+        @include bg-gradient-t2b(#c1f765, #37e510)
+
+      &:nth-child(8)::before
+        @include bg-gradient-t2b(#fcf299, #c1f765)
+
+      &:nth-child(10)::before
+        @include bg-gradient-t2b(#f7f3cd, #fcf299)
+
+
+  // Style Star
   &.rating-star
 
     label,

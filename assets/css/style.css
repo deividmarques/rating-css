@@ -1,17 +1,44 @@
+* {
+  margin: 0;
+  padding: 0; }
+
 body {
-  background: #6d00d9; }
+  background: #6d00d9;
+  font-family: Tahoma;
+  padding-top: 75px; }
+
+p {
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.6); }
 
 .samples {
-  position: relative;
-  margin-bottom: 50px; }
+  position: relative; }
 
 .title {
   font-size: 42px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   letter-spacing: 2px;
   text-align: center;
+  margin: 15px 0;
   color: white;
   font-family: "Luckiest Guy"; }
+
+.topbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  z-index: 2; }
+
+hr {
+  margin: 50px 0;
+  border: none;
+  border-bottom: 8px double rgba(0, 0, 0, 0.1); }
 
 .rating:not(old) {
   overflow: hidden;
@@ -33,12 +60,12 @@ body {
   .rating:not(old) label:hover ~ label span, .rating:not(old):not(:hover) > :checked ~ label:before, .rating:not(old):not(:hover) > :checked ~ label span {
     opacity: 1; }
   .rating:not(old) > input {
-    opacity: 0; }
+    opacity: 0;
+    width: 0; }
 
 .rating:not(old) label {
   background: rgba(255, 255, 255, 0.2);
   width: 100px;
-  margin-left: 1px;
   height: 100px; }
   .rating:not(old) label::before {
     transition: opacity 0.2s linear;
@@ -51,7 +78,8 @@ body {
 .rating:not(old).rating-circle label {
   background: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
-  transform: scale(1); }
+  transform: scale(1);
+  margin: 0 3px; }
   .rating:not(old).rating-circle label::before {
     border-radius: 50%;
     opacity: 0;
@@ -67,11 +95,48 @@ body {
 .rating:not(old).rating-circle label:hover ~ label span, .rating:not(old).rating-circle:not(:hover) > :checked ~ label:before, .rating:not(old).rating-circle:not(:hover) > :checked ~ label span {
   transform: scale(1);
   opacity: 1; }
-.rating:not(old).rating-button label {
-  background: white; }
-  .rating:not(old).rating-button label::before {
-    box-shadow: inset 0 6px 8px rgba(0, 0, 0, 0.3);
-    background: white; }
+.rating:not(old).rating-bar label {
+  background: rgba(255, 255, 255, 0.1); }
+  .rating:not(old).rating-bar label:nth-child(2)::before {
+    background-color: #0dbc15;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#0dbc15), to(#0dbc15));
+    background-image: -webkit-linear-gradient(left, #0dbc15, #0dbc15);
+    background-image: -moz-linear-gradient(left, #0dbc15, #0dbc15);
+    background-image: -ms-linear-gradient(left, #0dbc15, #0dbc15);
+    background-image: -o-linear-gradient(left, #0dbc15, #0dbc15);
+    background-image: linear-gradient(left, #0dbc15, #0dbc15); }
+  .rating:not(old).rating-bar label:nth-child(4)::before {
+    background-color: #37e510;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#37e510), to(#0dbc15));
+    background-image: -webkit-linear-gradient(left, #37e510, #0dbc15);
+    background-image: -moz-linear-gradient(left, #37e510, #0dbc15);
+    background-image: -ms-linear-gradient(left, #37e510, #0dbc15);
+    background-image: -o-linear-gradient(left, #37e510, #0dbc15);
+    background-image: linear-gradient(left, #37e510, #0dbc15); }
+  .rating:not(old).rating-bar label:nth-child(6)::before {
+    background-color: #c1f765;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#c1f765), to(#37e510));
+    background-image: -webkit-linear-gradient(left, #c1f765, #37e510);
+    background-image: -moz-linear-gradient(left, #c1f765, #37e510);
+    background-image: -ms-linear-gradient(left, #c1f765, #37e510);
+    background-image: -o-linear-gradient(left, #c1f765, #37e510);
+    background-image: linear-gradient(left, #c1f765, #37e510); }
+  .rating:not(old).rating-bar label:nth-child(8)::before {
+    background-color: #fcf299;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fcf299), to(#c1f765));
+    background-image: -webkit-linear-gradient(left, #fcf299, #c1f765);
+    background-image: -moz-linear-gradient(left, #fcf299, #c1f765);
+    background-image: -ms-linear-gradient(left, #fcf299, #c1f765);
+    background-image: -o-linear-gradient(left, #fcf299, #c1f765);
+    background-image: linear-gradient(left, #fcf299, #c1f765); }
+  .rating:not(old).rating-bar label:nth-child(10)::before {
+    background-color: #f7f3cd;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f3cd), to(#fcf299));
+    background-image: -webkit-linear-gradient(left, #f7f3cd, #fcf299);
+    background-image: -moz-linear-gradient(left, #f7f3cd, #fcf299);
+    background-image: -ms-linear-gradient(left, #f7f3cd, #fcf299);
+    background-image: -o-linear-gradient(left, #f7f3cd, #fcf299);
+    background-image: linear-gradient(left, #f7f3cd, #fcf299); }
 .rating:not(old).rating-star label,
 .rating:not(old).rating-star label::before {
   width: 125px;
