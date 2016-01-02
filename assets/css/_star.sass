@@ -1,5 +1,6 @@
 $size-default: 100px
 $height-default: 50px
+$size-star: 125px
 $color: #fff
 $colorCircle: #fff
 $colorButton: #FFF
@@ -87,3 +88,17 @@ $colorButton: #FFF
       &::before
         box-shadow: inset 0 6px 8px rgba(0,0,0, .3)
         background: $colorButton
+
+  // Style Card
+  &.rating-star
+
+    label,
+    label::before
+      width: $size-star
+      height: $size-star
+
+    label
+      background: url(../images/star-off.svg) transparent
+
+      &::before
+        background: url(../images/star-on.svg) transparent
