@@ -50,8 +50,14 @@ hr {
 
 .rating:not(old) {
   display: flex;
+  -webkit-display: flex;
+  -moz-display: flex;
   flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse;
+  -moz-flex-direction: row-reverse;
   justify-content: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
   margin-bottom: 50px; }
   .rating:not(old) label {
     cursor: pointer;
@@ -80,7 +86,7 @@ hr {
   background: rgba(195, 80, 217, 0.5);
   border-radius: 50%;
   transform: scale(1);
-  margin: 0 3px;
+  margin: 0 10px;
   -moz-transition: transform 0.2s ease-in;
   -o-transition: transform 0.2s ease-in;
   -webkit-transition: transform 0.2s ease-in;
