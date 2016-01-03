@@ -1,3 +1,36 @@
+.rating:not(old).rating-love label span::after, .rating:not(old).rating-love label span::before, .rating:not(old).rating-love label::after, .rating:not(old).rating-love label::before {
+  position: absolute;
+  content: "";
+  left: 45px;
+  top: 10px;
+  width: 45px;
+  height: 80px;
+  -moz-border-radius: 50px 50px 0 0;
+  border-radius: 50px 50px 0 0;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%; }
+
+.rating:not(old).rating-love label span::after, .rating:not(old).rating-love label::after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  transform-origin: 100% 100%; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -202,71 +235,14 @@ hr {
     position: relative;
     z-index: 1; }
     .rating:not(old).rating-love label span::after, .rating:not(old).rating-love label span::before {
-      position: absolute;
-      content: "";
-      left: 45px;
-      top: 10px;
-      width: 45px;
-      height: 80px;
-      background: #92080a;
-      -moz-border-radius: 50px 50px 0 0;
-      border-radius: 50px 50px 0 0;
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-      -webkit-transform-origin: 0 100%;
-      -moz-transform-origin: 0 100%;
-      -ms-transform-origin: 0 100%;
-      -o-transform-origin: 0 100%;
-      transform-origin: 0 100%; }
-    .rating:not(old).rating-love label span::after {
-      left: 0;
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-      -webkit-transform-origin: 100% 100%;
-      -moz-transform-origin: 100% 100%;
-      -ms-transform-origin: 100% 100%;
-      -o-transform-origin: 100% 100%;
-      transform-origin: 100% 100%; }
+      background: #92080a; }
   .rating:not(old).rating-love label::after, .rating:not(old).rating-love label::before {
-    position: absolute;
-    content: "";
-    left: 45px;
-    top: 10px;
-    width: 45px;
-    height: 80px;
-    background: #f20e12;
-    -moz-border-radius: 50px 50px 0 0;
-    border-radius: 50px 50px 0 0;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    -webkit-transform-origin: 0 100%;
-    -moz-transform-origin: 0 100%;
-    -ms-transform-origin: 0 100%;
-    -o-transform-origin: 0 100%;
-    transform-origin: 0 100%;
-    z-index: 2; }
+    z-index: 2;
+    background: #f20e12; }
   .rating:not(old).rating-love label::after {
-    left: 0;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    -webkit-transform-origin: 100% 100%;
-    -moz-transform-origin: 100% 100%;
-    -ms-transform-origin: 100% 100%;
-    -o-transform-origin: 100% 100%;
-    transform-origin: 100% 100%;
     opacity: 0; }
+.rating:not(old).rating-love label:hover span,
+.rating:not(old).rating-love label:hover ~ label span, .rating:not(old).rating-love:not(:hover) > :checked ~ label span,
 .rating:not(old).rating-love label:hover::before,
 .rating:not(old).rating-love label:hover ~ label::before, .rating:not(old).rating-love:not(:hover) > :checked ~ label::before,
 .rating:not(old).rating-love label:hover::after,

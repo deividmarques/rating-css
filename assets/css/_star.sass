@@ -169,94 +169,36 @@ $color-love: #F20E12
       overflow: visible
 
       span
-        // opacity: 0
         position: relative
         z-index: 1
 
         &::after,
         &::before
-          position: absolute
-          content: ""
-          left: 45px
-          top: 10px
-          width: 45px
-          height: 80px
           background: darken($color-love, 20%)
-          -moz-border-radius: 50px 50px 0 0
-          border-radius: 50px 50px 0 0
-          -webkit-transform: rotate(-45deg)
-          -moz-transform: rotate(-45deg)
-          -ms-transform: rotate(-45deg)
-          -o-transform: rotate(-45deg)
-          transform: rotate(-45deg)
-          -webkit-transform-origin: 0 100%
-          -moz-transform-origin: 0 100%
-          -ms-transform-origin: 0 100%
-          -o-transform-origin: 0 100%
-          transform-origin: 0 100%
-
+          @extend %cuore-left
 
         &::after
-          left: 0
-          -webkit-transform: rotate(45deg)
-          -moz-transform: rotate(45deg)
-          -ms-transform: rotate(45deg)
-          -o-transform: rotate(45deg)
-          transform: rotate(45deg)
-          -webkit-transform-origin: 100% 100%
-          -moz-transform-origin: 100% 100%
-          -ms-transform-origin: 100% 100%
-          -o-transform-origin: 100% 100%
-          transform-origin: 100% 100%
+          @extend %cuore-right
 
       &::after,
       &::before
-        position: absolute
-        content: ""
-        left: 45px
-        top: 10px
-        width: 45px
-        height: 80px
-        background: $color-love
-        -moz-border-radius: 50px 50px 0 0
-        border-radius: 50px 50px 0 0
-        -webkit-transform: rotate(-45deg)
-        -moz-transform: rotate(-45deg)
-        -ms-transform: rotate(-45deg)
-        -o-transform: rotate(-45deg)
-        transform: rotate(-45deg)
-        -webkit-transform-origin: 0 100%
-        -moz-transform-origin: 0 100%
-        -ms-transform-origin: 0 100%
-        -o-transform-origin: 0 100%
-        transform-origin: 0 100%
-        // opacity: 0
         z-index: 2
+        background: $color-love
+        @extend %cuore-left
 
       &::after
-        left: 0
-        -webkit-transform: rotate(45deg)
-        -moz-transform: rotate(45deg)
-        -ms-transform: rotate(45deg)
-        -o-transform: rotate(45deg)
-        transform: rotate(45deg)
-        -webkit-transform-origin: 100% 100%
-        -moz-transform-origin: 100% 100%
-        -ms-transform-origin: 100% 100%
-        -o-transform-origin: 100% 100%
-        transform-origin: 100% 100%
+        @extend %cuore-right
         opacity: 0
 
     label:hover span,
     label:hover ~ label span,
-    &:not(:hover) > :checked ~ label span
+    &:not(:hover) > :checked ~ label span,
     label:hover::before,
     label:hover ~ label::before,
     &:not(:hover) > :checked ~ label::before,
     label:hover::after,
     label:hover ~ label::after,
     &:not(:hover) > :checked ~ label::after,
-
     label:hover span::before,
     label:hover ~ label span::before,
     &:not(:hover) > :checked ~ label span::before,
@@ -264,3 +206,4 @@ $color-love: #F20E12
     label:hover ~ label span::after,
     &:not(:hover) > :checked ~ label span::after
       opacity: 1
+
