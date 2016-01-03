@@ -207,14 +207,14 @@ hr {
 .rating:not(old).rating-pacman label {
   width: 0px;
   height: 0px;
-  border-right: 50px solid #6d00d9;
-  border-top: 50px solid yellow;
-  border-left: 50px solid yellow;
-  border-bottom: 50px solid yellow;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+  border-right: 45px solid #6d00d9;
+  border-top: 45px solid yellow;
+  border-left: 45px solid yellow;
+  border-bottom: 45px solid yellow;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+  border-bottom-left-radius: 45px;
+  border-bottom-right-radius: 45px;
   margin: 0 5px;
   box-shadow: -5px 3px 5px rgba(0, 0, 0, 0.4); }
   .rating:not(old).rating-pacman label::before {
