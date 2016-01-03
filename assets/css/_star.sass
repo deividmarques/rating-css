@@ -112,16 +112,20 @@ $color-love: #F20E12
     label
       background: url(../images/star-off.png) no-repeat transparent
       margin: 0 5px
+      overflow: visible
 
       &::before
         background: url(../images/star-on.png) no-repeat transparent
 
-      &:hover
-        transform: scale(1.1)
-        @include transition(transform 0.2s ease-in)
-        filter: drop-shadow(5px 5px 6px rgba(#000,.5))
-        -webkit-filter: drop-shadow(5px 5px 6px rgba(#000,.5))
-        -moz-filter: drop-shadow(5px 5px 6px rgba(#000,.5))
+      // &:hover
+    label:hover:before,
+    label:hover ~ label:before,
+    &:not(:hover) > :checked ~ label::before
+      transform: scale(1.1)
+      @include transition(transform 0.2s ease-in)
+      filter: drop-shadow(5px 5px 6px rgba(#000,.5))
+      -webkit-filter: drop-shadow(5px 5px 6px rgba(#000,.5))
+      -moz-filter: drop-shadow(5px 5px 6px rgba(#000,.5))
 
 
   // Style Pacman

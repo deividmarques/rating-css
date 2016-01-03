@@ -190,18 +190,20 @@ hr {
   height: 130px; }
 .rating:not(old).rating-star label {
   background: url(../images/star-off.png) no-repeat transparent;
-  margin: 0 5px; }
+  margin: 0 5px;
+  overflow: visible; }
   .rating:not(old).rating-star label::before {
     background: url(../images/star-on.png) no-repeat transparent; }
-  .rating:not(old).rating-star label:hover {
-    transform: scale(1.1);
-    -moz-transition: transform 0.2s ease-in;
-    -o-transition: transform 0.2s ease-in;
-    -webkit-transition: transform 0.2s ease-in;
-    transition: transform 0.2s ease-in;
-    filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.5));
-    -webkit-filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.5));
-    -moz-filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.5)); }
+.rating:not(old).rating-star label:hover:before,
+.rating:not(old).rating-star label:hover ~ label:before, .rating:not(old).rating-star:not(:hover) > :checked ~ label::before {
+  transform: scale(1.1);
+  -moz-transition: transform 0.2s ease-in;
+  -o-transition: transform 0.2s ease-in;
+  -webkit-transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.5));
+  -webkit-filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.5));
+  -moz-filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.5)); }
 .rating:not(old).rating-pacman label {
   width: 0px;
   height: 0px;
